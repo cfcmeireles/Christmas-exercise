@@ -8,12 +8,7 @@ body {
   color: #cc231e;
 }
 
-p:nth-child(-n + 3) {
-  line-height: 0.5;
-  color: white;
-}
-
-p:nth-child(n + 4) {
+p {
   line-height: 0.5;
   color: white;
 }
