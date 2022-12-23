@@ -1,0 +1,18 @@
+body {
+  background-color: #34a65f;
+}
+
+.tree {
+  text-align: center;
+  color: #cc231e;
+}
+
+p:nth-child(-n + 3) {
+  line-height: 0.5;
+  color: white;
+}
+
+p:nth-child(n + 4) {
+  line-height: 0.5;
+  color: white;
+}
