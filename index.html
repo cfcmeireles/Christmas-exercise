@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: #34a65f;
+    }
+
+    .tree {
+      text-align: center;
+      color: #cc231e;
+    }
+
+    p:nth-child(-n + 3) {
+      line-height: 0.5;
+      color: white;
+    }
+
+    p:nth-child(n + 4) {
+      line-height: 0.5;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="tree">Merry Christmas! 🎅</div>
+  </body>
+  <script>
+    const xmasTree = document.querySelector(".tree");
+
+    function christmasTree(height) {
+      const star = ["*"];
+      for (var i = 0; i < height; i++) {
+        const paragraph = document.createElement("p");
+        let starString = star.toString();
+        const newStar = starString.replaceAll(",", "");
+        paragraph.innerHTML = newStar;
+        xmasTree.appendChild(paragraph);
+        star.push("**");
+      }
+      if (height > 4) {
+        const secondTree = document.querySelector(".tree p:nth-child(4)");
+        secondTree.insertAdjacentHTML("beforebegin", "... and a Happy New Year! 🎉");
+      }
+    }
+
+    christmasTree(3);
+    christmasTree(5);
+  </script>
+</html>
